@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pivot Table</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <script src="tableau.extensions.1.latest.min.js"></script>
+    <script src="index.js"></script>
+</head>
+
+<body class="container-fluid d-flex flex-column shadow-lg rounded" style="height: 100vh;">
+    <h4 class="bg-primary text-white p-2 row flex-row no-gutters">Worksheet to Parameter Extension</h4>
+    <div class="extension-container p-1 row flex-row no-gutters">
+        <form class="p-2 row flex-row no-gutters flex-grow-1">
+            <div class="row">
+                <div class="col-4">
+                    <label for="selectedWorksheet" class="form-label">Source Worksheet</label>
+                    <select class="form-select form-select-sm w-100" id="selectedWorksheet">
+                        <option value='' disabled>Loading...</option>
+                    </select>
+                </div>
+                <div class="col-4">
+                    <label for="pickparam" class="form-label">Target Parameter</label>
+                    <select class="form-select form-select-sm w-100" id="pickparam">
+                        <option value='' disabled>Loading...</option>
+                    </select>
+                </div>
+                <div class="col-4">
+                    <label for="virtualWorksheet" class="form-label">Virtual Table Sheet</label>
+                    <select class="form-select form-select-sm w-100" id="virtualWorksheet">
+                        <option value='' disabled>Loading...</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row pt-3">
+                <div class="col-6">
+                    <div class="btn btn-primary btn-block" id="save-settings" disabled>Save</div>
+                    <div class="btn btn-secondary btn-block" id="initialize">Run</div>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
